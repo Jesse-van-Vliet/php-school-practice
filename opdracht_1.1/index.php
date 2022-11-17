@@ -10,7 +10,7 @@
 <?php
 $name = "jesse";
 echo "<h1> $name</h1>";
-echo "<p>$name</p>
+echo "<p>$name</p>";
 ?>
 
 </body>
