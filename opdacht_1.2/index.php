@@ -8,6 +8,9 @@
 </head>
 <body>
     <?php
+
+    date_default_timezone_set ("Europe/Amsterdam");
+
     $e = "e";
     $today = date("l d F Y ");
     echo "<p>Het is vandaag: $today</p>";
