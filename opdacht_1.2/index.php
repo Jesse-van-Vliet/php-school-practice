@@ -11,20 +11,19 @@
 
     date_default_timezone_set ("Europe/Amsterdam");
 
-    $e = "e";
     $today = date("l d F Y ");
     echo "<p>Het is vandaag: $today</p>";
 
-    $yearday = date("z");
-    echo "<p>Vandaag is het de $yearday$e dag van het jaar</p>";
+    $yearday = date("z")."e";
+    echo "<p>Vandaag is het de $yearday dag van het jaar</p>";
 
     $day = date("l");
-    $daynumber = date("w");
-    echo "<p>$day is de $daynumber$e dag van de week</p>";
+    $daynumber = date("w")."e";
+    echo "<p>$day is de $daynumber dag van de week</p>";
 
     $month = date("F");
     $totaldays = date("j");
-    echo "<p>de maand $month heeft in totaal $daynumber dagen</p>";
+    echo "<p>de maand $month heeft in totaal $totaldays dagen</p>";
 
     $year = date("Y");
     $leapyearcheck = date("L");
