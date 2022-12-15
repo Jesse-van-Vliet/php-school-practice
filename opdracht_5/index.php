@@ -26,6 +26,9 @@
             <input type="radio" name="gender" id="female" value="female">
             <label for="male">Man</label>
             <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="unknown">Onbekend</label>
+            <input type="radio" name="unknown" id="unknown" value="unknown">
+
         </div>
 
     <div>
