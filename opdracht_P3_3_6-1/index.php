@@ -13,15 +13,8 @@
 session_start();
 // everytime sessions starts it does + 1
 $_SESSION['counter']+= 1;
-// this echo's the session counter
-echo $_SESSION['counter'] . "<br>";
-// $counter = $_SESSION['counter'];
-// setcookie("counter", $counter , time() + 3600);
-// if($counter >= $_SESSION['counter']){
-//     $_COOKIE['counter'] = $counter;
-// }
-// echo $_COOKIE['counter'];
-
+// echo's the session counter 
+echo "Deze pagina heb je al " . $_SESSION['counter'] . " voordat je de internet browser heb afgesloten <br>";
 // ?>
 
 
