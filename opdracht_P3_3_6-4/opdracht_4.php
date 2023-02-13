@@ -16,7 +16,8 @@
         </div>
 
         <div>
-        <input type="submit" value="submit" name="submit">
+        <input type="submit" value="Bereken de straal" name="submit">
+        <input type="submit" value="Bereken de oppervlakte" name="space">
     </div>
 
         </form>
@@ -25,12 +26,19 @@
         <?php
         //    the function to calculate
         function calculation($number) {
+            // pi function php
+            $pi = pi();
             // will save the answer for the Ray
-            $num = $number * 3.14159 * 2;
+            $num = $number * $pi * 2;
             echo "De omtrek van de cirkel met straal " . $number . " is: " . number_format($num, 1);
+        }
+
+        function calculation2($number) {
+            // pi function php
+            $pi = pi();
             // this will save the number for the surface space
-            $num2 = 3.14159 * $number * $number;
-            echo "<br>De oppervlakte van de cirkel met straal " . $number . " is: " . number_format($num2, 1);
+            $num2 = $pi * $number * $number;
+            echo "<br>De oppervlakte van een cirkel met straal " . $number . " is: " . number_format($num2, 1);
         }
 
 if (isset($_POST["submit"])) {
@@ -41,6 +49,14 @@ if (isset($_POST["submit"])) {
     calculation($number); 
   }
 
+
+  if (isset($_POST["space"])) {
+    
+    // this will retrieve number from the form
+    $number = $_POST["number"];
+    // this will activate the function
+    calculation2($number); 
+  }
         ?>
     </main>
 </body>
