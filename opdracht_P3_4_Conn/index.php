@@ -8,6 +8,13 @@
 </head>
 <body>
 <?php 
+
+
+ # 0
+    
+    if (isset($_POST["submit"])) {
+     echo "<h2>U bent niet op de juiste manier hier gekomen</h2>";
+    }
     #1 verbinding met databse
     require "connect3dplus.php";
     
