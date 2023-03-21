@@ -11,19 +11,7 @@
 <body>
 
     <?php
-    // // starting sesion
-// session_start();
-// // Every time session starts +1  (refresh starts a new session )
-// $_SESSION['counter']+= 1;
-// // echo's the amounts of time the session starts before the browser closes
-// echo "Je hebt deze pagina nu al " . $_SESSION['counter'] . " voordat je je browser sloot<br>";
-// // This sets a cookie named count and does ++ everytime the session refreshes and it will expire after 12000 seconds
-// setcookie('count', ++$_COOKIE['count'], time() + (12000), "/");
-// // echo's the total amount off refreshes since that number count is stored in a cookie
-// echo "In totaal heb je deze pagina al : " . $_COOKIE['count'] . " keer bekeken"; 
-    
-
-
+ 
     session_start();
     // checks if session['sessiontime'] is made 
     if (isset($_SESSION['sessiontime'])) {
@@ -38,6 +26,7 @@
 
     // Checks if $_COOKIE['count'] is set if so it will do +=1
     if (isset($_COOKIE['count'])) {
+        // does +1 to cookie
         $_COOKIE['count'] += 1;
         setcookie('count', $_COOKIE['count'], time() + 3600);
         echo "In totaal heb je deze pagina al : " . $_COOKIE['count'] . " keer bekeken";
